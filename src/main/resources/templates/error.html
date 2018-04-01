@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" 
+      layout:decorate="~{base}" xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/jquery/3.1.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <title th:text="#{app.title}">Title</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="pageheader">
+			<h1 th:text="#{app.name}">Name</h1>
+		</div>
+	    <article>
+    	    <section class="errorPage">
+        	    <h4 th:text="${message}" id="messageHeading"></h4>
+    	    </section>
+        </article>
+		<div class="pagefooter">
+			<h1 th:text="#{app.copyright}">Copyright</h1>
+		</div>
+	</div>
+</body>
+</html>
